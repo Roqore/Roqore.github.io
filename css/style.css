@@ -1,0 +1,68 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+}
+
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header styles */
+.site-header {
+    background-color: #222;
+    color: white;
+    padding: 1rem 0;
+}
+
+.site-header .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.site-header .nav {
+    margin-top: 0.5rem;
+}
+
+.site-header .nav a {
+    margin-right: 1rem;
+    color: white;
+}
+
+.site-header .nav a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles */
+.site-footer {
+    background-color: #eee;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.site-footer .footer-links {
+    margin-top: 0.5rem;
+}
+
+.site-footer .footer-links a {
+    margin: 0 0.5rem;
+    color: #0077cc;
+}
