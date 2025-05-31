@@ -10,8 +10,10 @@
     --light-primary-200: #3C5FEF;
     --light-idle-100: #DAE2F4;
     --light-idle-200: #BDC3DA;
+    --light-idle-300: #D7DDEB;
     --light-glow: radial-gradient(circle, #B5E0FFFF 0%, #B3DFFF00 100%);
-    --light-logo-full-svg: url('../assets/svgs/roqore-logo-light-1.svg');
+    --light-logo-full-svg: url('/assets/svgs/roqore-logo-light-1.svg');
+    --light-theme-icon: url('/assets/icons/moon.svg');
 
 
     /* Dark Theme Colors */
@@ -23,8 +25,10 @@
     --dark-primary-200: #FFCA00;
     --dark-idle-100: #22283B;
     --dark-idle-200: #191B28;
+    --dark-idle-300: #252030;
     --dark-glow: radial-gradient(circle, #FFCA00FF 0%, #FFCA0000 100%);
-    --dark-logo-full-svg: url('../assets/svgs/roqore-logo-dark-1.svg');
+    --dark-logo-full-svg: url('/assets/svgs/roqore-logo-dark-1.svg');
+    --dark-theme-icon: url('/assets/icons/sun.svg');
 }
 
 /* Apply colors by referencing defined palettes */
@@ -32,14 +36,18 @@
     --color-bg: var(--light-bg);
     --color-text: var(--light-text);
     --color-line: var(--light-line);
+    --color-theme-icon: var(--light-theme-icon);
     --logo-full-svg: var(--light-logo-full-svg);
+    --theme-icon: var(--light-theme-icon);
 }
 
 .dark {
     --color-bg: var(--dark-bg);
     --color-text: var(--dark-text);
     --color-line: var(--dark-line);
+    --color-theme-icon: var(--dark-theme-icon);
     --logo-full-svg: var(--dark-logo-full-svg);
+    --theme-icon: var(--dark-theme-icon);
 }
 
 /* Use the current color variables in styles */
@@ -68,6 +76,24 @@ section {
     height: 100vh;
     width: 100%;
 }
+
+#theme-toggle {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    z-index: 1000;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    background-image: var(--theme-icon);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
 
 /* Lines start */
 #lines {
