@@ -13,23 +13,50 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/animation.css" />
 </head>
 
 <body>
     <!-- header -->
 
-    <button id="theme-toggle" aria-label="Toggle Theme"></button>
+    <!-- Overlay -->
+    <div id="overlay-layer">
+        <!-- Glow Overlay -->
+        <div id="glow-overlay">
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+        </div>
 
-    <!-- Lines Overlay -->
-    <div id="lines">
-        <div class="line vertical-line v1"></div>
-        <div class="line vertical-line v2"></div>
-        <div class="line horizontal-line h1"></div>
-        <div class="line horizontal-line h2"></div>
+        <button id="theme-toggle" aria-label="Toggle Theme"></button>
+
+        <!-- Lines Overlay -->
+        <div id="lines">
+            <div class="line vertical-line v1"></div>
+            <div class="line vertical-line v2"></div>
+            <div class="line horizontal-line h1"></div>
+            <div class="line horizontal-line h2"></div>
+        </div>
+
+        <!-- Navbar -->
+        <nav id="navbar">
+            <ul>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#services">services</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p>© 2025 Roqore. All rights reserved.</p>
+        </footer>
+
+        <!-- Bottom Logo Overlay -->
+        <div id="logo-footer-svg"></div>
     </div>
 
     <main>
-        <div class="logo-full-svg"></div>
+        <div id="logo-full-svg"></div>
     </main>
 
     <!-- footer -->
