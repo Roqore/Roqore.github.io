@@ -1,0 +1,7 @@
+@media (max-width: 600px) {
+
+    .services,
+    .values {
+        grid-template-columns: 1fr;
+    }
+}

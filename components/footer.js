@@ -1,16 +1,16 @@
 class RQFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <footer class="site-footer">
-        <div class="container">
-          <p>&copy; ${new Date().getFullYear()} Roqore. All rights reserved.</p>
-          <div class="footer-links">
-            <a href="/pages/privacy.html">Privacy</a>
-            <a href="/pages/terms.html">Terms</a>
-          </div>
-        </div>
+      <footer>
+        <p>&copy; ${new Date().getFullYear()} Roqore. All rights reserved.</p>
+        <p>
+            <a href="#">About</a> |
+            <a href="#services">Services</a> |
+            <a href="#">Privacy Policy</a>
+        </p>
+        <p>Email: <a href="mailto:sakd@Roqore.dev">sakd@Roqore.dev</a></p>
       </footer>
     `;
   }
 }
-customElements.define("site-footer", RQFooter);
+customElements.define("rq-footer", RQFooter);
