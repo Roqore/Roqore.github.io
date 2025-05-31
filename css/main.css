@@ -11,6 +11,7 @@
     --light-idle-100: #DAE2F4;
     --light-idle-200: #BDC3DA;
     --light-glow: radial-gradient(circle, #B5E0FFFF 0%, #B3DFFF00 100%);
+    --light-logo-full-svg: url('../assets/svgs/roqore-logo-light-1.svg');
 
 
     /* Dark Theme Colors */
@@ -23,6 +24,7 @@
     --dark-idle-100: #22283B;
     --dark-idle-200: #191B28;
     --dark-glow: radial-gradient(circle, #FFCA00FF 0%, #FFCA0000 100%);
+    --dark-logo-full-svg: url('../assets/svgs/roqore-logo-dark-1.svg');
 }
 
 /* Apply colors by referencing defined palettes */
@@ -30,25 +32,35 @@
     --color-bg: var(--light-bg);
     --color-text: var(--light-text);
     --color-line: var(--light-line);
+    --logo-full-svg: var(--light-logo-full-svg);
 }
 
 .dark {
     --color-bg: var(--dark-bg);
     --color-text: var(--dark-text);
     --color-line: var(--dark-line);
+    --logo-full-svg: var(--dark-logo-full-svg);
 }
 
 /* Use the current color variables in styles */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    margin: 0;
     font-family: 'Monda', sans-serif;
     background-color: var(--color-bg);
+    transition: all 0.3s ease-in-out;
 }
 
 main {
-    flex: 1;
-    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 section {
@@ -58,38 +70,72 @@ section {
 }
 
 /* Lines start */
+#lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: none;
+    /* Allows clicks to pass through */
+    z-index: 999;
+}
+
 .line {
     position: absolute;
     background-color: var(--color-line);
+    transition: all 0.3s ease-in-out;
 }
 
 .vertical-line {
-    width: 2px;
-    height: 100vh;
+    width: 1px;
+    height: 85dvh;
+    position: absolute;
+    bottom: 0;
+    /* start from the bottom */
+    background-color: var(--color-line);
 }
 
 .horizontal-line {
-    height: 2px;
-    width: 100vw;
+    height: 1px;
+    width: 90dvw;
+    right: 0;
+    /* start from the right side */
+    position: absolute;
 }
 
+/* Vertical lines (from bottom) */
 .v1 {
-    left: 25%;
-    top: 0;
+    right: 35dvw;
 }
 
 .v2 {
-    left: 75%;
-    top: 0;
+    right: 10dvw;
 }
 
+/* Horizontal lines (from right) */
 .h1 {
-    top: 25%;
-    left: 0;
+    bottom: calc(50% + 22.5dvh);
+    /* 25% within the 90vh block */
 }
 
 .h2 {
-    top: 75%;
-    left: 0;
+    bottom: calc(50% - 22.5dvh);
+    /* 75% within the 90vh block */
 }
+
 /* Lines end */
+
+/* logos start */
+.logo-full-svg {
+    background-image: var(--logo-full-svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40dvw;
+    height: 250px;
+    transition: all 0.3s ease-in-out;
+    margin-left: 195px;
+}
+
+/* logos end */
