@@ -6,81 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roqore - Software Solutions</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/overlay.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
-    <!-- Roqore Logo Overlay -->
+    <!-- header -->
 
-    <rq-header></rq-header>
+    <button id="theme-toggle" style="position: fixed; top: 1rem; right: 1rem; z-index: 1000;">
+        Toggle Theme
+    </button>
 
     <main>
         <section>
-            <h2>Your Problem-Solving Tech Partner</h2>
-            <p>Roqore is a software solutions organization built on one core principle: <em>if there's a problem, we can
-                    solve it</em>. Whether you're a startup, enterprise, or solo innovator, we tailor intelligent,
-                efficient, and scalable solutions using cutting-edge technologies — with zero limits on domain or
-                industry.
-            </p>
-        </section>
-
-        <section id="services">
-            <h2>End-to-End Software That Works for You</h2>
-            <div class="services">
-                <div class="service"><strong>Custom Software Development</strong><br>Tailored solutions that fit your
-                    exact
-                    needs.</div>
-                <div class="service"><strong>AI & Automation</strong><br>Smart systems that do the heavy lifting for
-                    you.
-                </div>
-                <div class="service"><strong>Web & Mobile Apps</strong><br>Responsive, beautiful, and functional
-                    interfaces.
-                </div>
-                <div class="service"><strong>Data & Analytics</strong><br>Actionable insights from your raw data.</div>
-                <div class="service"><strong>Integration & Optimization</strong><br>Make all your tools and processes
-                    work
-                    together seamlessly.</div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Built for Agility. Driven by Results.</h2>
-            <div class="values">
-                <div class="value">Tech-agnostic & domain-agnostic</div>
-                <div class="value">Fast and flexible development cycles</div>
-                <div class="value">Transparent communication</div>
-                <div class="value">Proven problem-solving mindset</div>
-                <div class="value">Scalable, maintainable code</div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Real Problems. Real Solutions.</h2>
-            <blockquote>
-                "Roqore helped us automate a manual process that used to take days. Now it's done in minutes — and it's
-                rock
-                solid."<br>
-                — A Satisfied Client
-            </blockquote>
-        </section>
-
-        <section class="get-in-touch" id="contact">
-            <h3>Ready to Transform Your Ideas?</h3>
-            <p>Let's discuss how we can solve your unique challenges with custom software solutions.</p>
-            <a href="mailto:sakd@Roqore.dev">Get In Touch</a>
+            <div class="line vertical-line v1"></div>
+            <div class="line vertical-line v2"></div>
+            <div class="line horizontal-line h1"></div>
+            <div class="line horizontal-line h2"></div>
         </section>
     </main>
 
-    <rq-footer></rq-footer>
+    <!-- footer -->
 
-    <script type="module" src="components/header.js"></script>
-    <script type="module" src="components/get-in-touch.js"></script>
-    <script type="module" src="components/footer.js"></script>
-    <script type="module" src="components/overlay.js"></script>
+    <!-- scripts -->
+    <script src="js/theme.js"></script>
+
 </body>
 
 </html>

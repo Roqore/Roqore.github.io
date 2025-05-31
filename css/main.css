@@ -1,0 +1,95 @@
+/* Color Palettes Definition */
+
+:root {
+    /* Light Theme Colors */
+    --light-bg: #E9ECF4;
+    --light-text: #525C76;
+    --light-line: #D6DDEA;
+    --light-primary-50: #C6D7FD;
+    --light-primary-100: #6C91FE;
+    --light-primary-200: #3C5FEF;
+    --light-idle-100: #DAE2F4;
+    --light-idle-200: #BDC3DA;
+    --light-glow: radial-gradient(circle, #B5E0FFFF 0%, #B3DFFF00 100%);
+
+
+    /* Dark Theme Colors */
+    --dark-bg: #16161D;
+    --dark-text: #F4EDDF;
+    --dark-line: #213150;
+    --dark-primary-50: #372708;
+    --dark-primary-100: #FFDBAC;
+    --dark-primary-200: #FFCA00;
+    --dark-idle-100: #22283B;
+    --dark-idle-200: #191B28;
+    --dark-glow: radial-gradient(circle, #FFCA00FF 0%, #FFCA0000 100%);
+}
+
+/* Apply colors by referencing defined palettes */
+.light {
+    --color-bg: var(--light-bg);
+    --color-text: var(--light-text);
+    --color-line: var(--light-line);
+}
+
+.dark {
+    --color-bg: var(--dark-bg);
+    --color-text: var(--dark-text);
+    --color-line: var(--dark-line);
+}
+
+/* Use the current color variables in styles */
+
+body {
+    margin: 0;
+    font-family: 'Monda', sans-serif;
+    background-color: var(--color-bg);
+}
+
+main {
+    flex: 1;
+    overflow-y: auto;
+}
+
+section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Lines start */
+.line {
+    position: absolute;
+    background-color: var(--color-line);
+}
+
+.vertical-line {
+    width: 2px;
+    height: 100vh;
+}
+
+.horizontal-line {
+    height: 2px;
+    width: 100vw;
+}
+
+.v1 {
+    left: 25%;
+    top: 0;
+}
+
+.v2 {
+    left: 75%;
+    top: 0;
+}
+
+.h1 {
+    top: 25%;
+    left: 0;
+}
+
+.h2 {
+    top: 75%;
+    left: 0;
+}
+/* Lines end */
