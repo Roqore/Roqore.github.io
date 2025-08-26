@@ -69,7 +69,7 @@ header {
   text-align: center;
   color: white;
 
-  background: url('assets/banner.webp') no-repeat center center/cover;
+  background: url('/assets/banner.webp') no-repeat center center/cover;
 }
 
 /* Optional overlay for readability */
