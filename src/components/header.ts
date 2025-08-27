@@ -5,8 +5,8 @@ export function Header() {
   // Decide links based on page
   const isHome = path === '/' || path.endsWith('index.html');
 
-  const aboutHref = isHome ? '#about' : '/about';
-  const servicesHref = isHome ? '#services' : '/services';
+  const aboutHref = isHome ? '#about' : '/about.html';
+  const servicesHref = isHome ? '#services' : '/services.html';
   const contactHref = isHome ? '#contact' : '/#contact';
 
   return `
