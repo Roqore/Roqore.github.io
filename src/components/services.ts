@@ -3,10 +3,29 @@ export function Services() {
     <section id="services" class="services">
       <h2>Our Expertise</h2>
       <div class="service-grid">
-        <div class="service-card">Software Engineering & Architecture</div>
-        <div class="service-card">Data Engineering & Analysis</div>
-        <div class="service-card">AI & Machine Learning</div>
-        <div class="service-card">Cloud Deployments & Automation</div>
+        <div class="service-card">
+          <h3>Software Engineering & Architecture</h3>
+          <p>Custom applications & scalable systems.</p>
+          <a href="/services.html#software" class="read-more">Read More →</a>
+        </div>
+
+        <div class="service-card">
+          <h3>Data Engineering & Analysis</h3>
+          <p>Transform data into actionable insights.</p>
+          <a href="/services.html#data" class="read-more">Read More →</a>
+        </div>
+
+        <div class="service-card">
+          <h3>AI & Machine Learning</h3>
+          <p>Intelligent automation and predictive models.</p>
+          <a href="/services.html#ai" class="read-more">Read More →</a>
+        </div>
+
+        <div class="service-card">
+          <h3>Cloud Deployments & Automation</h3>
+          <p>Secure, scalable cloud solutions and automation.</p>
+          <a href="/services.html#cloud" class="read-more">Read More →</a>
+        </div>
       </div>
     </section>
   `;
