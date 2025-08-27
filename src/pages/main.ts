@@ -1,10 +1,10 @@
-import './style.css';
-import { Header } from './components/header';
-import { Hero } from './components/hero';
-import { About } from './components/about';
-import { Services } from './components/services';
-import { Contact } from './components/contact';
-import { Footer } from './components/footer';
+import '../style.css';
+import { Header } from '../components/header';
+import { Hero } from '../components/hero';
+import { About } from '../components/about';
+import { Services } from '../components/services';
+import { Contact } from '../components/contact';
+import { Footer } from '../components/footer';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   ${Header()}

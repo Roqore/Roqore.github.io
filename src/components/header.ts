@@ -2,7 +2,7 @@ export function Header() {
   return `
     <header>
       <nav class="navbar">
-        <img src="assets/logo.svg" alt="Roqore Logo" class="logo" />
+        <a href="/"><img src="assets/logo.svg" alt="Roqore Logo" class="logo" /></a>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
