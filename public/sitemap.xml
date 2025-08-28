@@ -6,17 +6,17 @@
     xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
     xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
-        <loc>https://roqore.github.io/</loc>
+        <loc>https://roqore.com/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://roqore.github.io/about.html</loc>
+        <loc>https://roqore.com/about.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://roqore.github.io/services.html</loc>
+        <loc>https://roqore.com/services.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
