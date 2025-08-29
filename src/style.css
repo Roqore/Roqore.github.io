@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fustat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap');
 
 :root {
   font-family: 'Fustat', system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -23,10 +23,8 @@ body {
 }
 
 header {
-  /* background: #fff; */
   background: transparent;
-  padding: 1rem 2rem;
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  padding: 2rem 2rem;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -34,12 +32,14 @@ header {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .logo {
   height: 50px;
+  transform: translateY(7%);
 }
 
 .nav-links {
@@ -65,14 +65,20 @@ header {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%) translateY(-10%) rotate(0deg);
-  /* angle of the ray */
+  transform: translateX(-50%) translateY(-30%) rotate(0deg);
   filter: blur(40px);
-  /* softness */
   opacity: 0.8;
   pointer-events: none;
 }
 
+.ray {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Rays */
 .ray-1 {
   width: 900px;
   height: 20vh;
@@ -114,10 +120,10 @@ header {
 }
 
 .ray-6 {
-  width: 100px;
+  width: 70px;
   height: 90vh;
   background: linear-gradient(to bottom,
-      rgba(255, 98, 0, 0.837),
+      rgba(255, 98, 0, 0.572),
       rgba(255, 149, 0, 0.205));
 }
 
@@ -133,23 +139,13 @@ header {
 .hero {
   text-align: center;
   position: relative;
-  height: 100dvh;
+  height: 70dvh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-
-  /* background: url('/assets/banner.webp') no-repeat center center/cover; */
 }
-
-/* Optional overlay for readability */
-/* .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: hsla(22, 99%, 67%, 0.8);
-} */
 
 .hero-content {
   position: relative;
@@ -158,10 +154,19 @@ header {
   padding: 1rem;
 }
 
-
 .hero h1 {
-  font-size: 3rem;
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 1;
   margin-bottom: 1rem;
+}
+
+.hero h2 .light {
+  font-weight: 300;
+}
+
+.hero h2 .bold {
+  font-weight: 600;
 }
 
 .hero p {

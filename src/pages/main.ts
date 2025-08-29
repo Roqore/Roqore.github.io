@@ -18,8 +18,9 @@ import { LightRays } from '../components/light-rays';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   ${Header()}
-  ${Hero()}
   ${LightRays()}
+  ${Hero()}
+  ${About()}
   ${Footer()}
 `;
 
