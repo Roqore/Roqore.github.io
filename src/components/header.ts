@@ -7,6 +7,7 @@ export function Header() {
 
   const aboutHref = isHome ? '#about' : '/about';
   const servicesHref = isHome ? '#services' : '/services';
+  const portfolioHref = isHome ? '#portfolio' : '/portfolio';
   const contactHref = isHome ? '#contact' : '/#contact';
 
   return `
@@ -18,7 +19,7 @@ export function Header() {
         </ul>
         <a href="/"><img src="/assets/logo white.svg" alt="Roqore Logo" class="logo" /></a>
         <ul class="nav-links">
-          <li><a href="${servicesHref}">Portfolio</a></li>
+          <li><a href="${portfolioHref}">Portfolio</a></li>
           <li><a href="${contactHref}">Contact</a></li>
         </ul>
       </nav>

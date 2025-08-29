@@ -18,7 +18,7 @@ export function Hero() {
         <h2>
           <span class="light">solving</span>
           <span class="bold"> Raw </span>
-          <span class="light">problems with</span>
+          <span class="light">problems — with</span>
           <span class="bold"> Core </span>
           <span class="light">solutions</span>
         </h2>
