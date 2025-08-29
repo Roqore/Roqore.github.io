@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Fustat&display=swap');
+
 :root {
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Fustat', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: #111;
-  background-color: #ffffff;
+  --background-color: linear-gradient(90deg, #0e0e13 0%, #16161f 50%, #0e0e13 100%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,15 +17,16 @@
 
 body {
   margin: 0;
-  background: #fff;
+  background: var(--background-color);
   color: #111;
   line-height: 1.6;
 }
 
 header {
-  background: #fff;
+  /* background: #fff; */
+  background: transparent;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -58,10 +61,78 @@ header {
   color: #ff7f50;
 }
 
+.light-ray {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10%) rotate(0deg);
+  /* angle of the ray */
+  filter: blur(40px);
+  /* softness */
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.ray-1 {
+  width: 900px;
+  height: 20vh;
+  background: linear-gradient(to bottom,
+      rgba(126, 48, 0, 0.893),
+      rgba(255, 149, 0, 0.05));
+}
+
+.ray-2 {
+  width: 700px;
+  height: 30vh;
+  background: linear-gradient(to bottom,
+      rgba(181, 69, 0, 0.43),
+      rgba(255, 149, 0, 0.05));
+}
+
+.ray-3 {
+  width: 600px;
+  height: 50vh;
+  background: linear-gradient(to bottom,
+      rgba(181, 69, 0, 0.837),
+      rgba(255, 149, 0, 0.05));
+}
+
+.ray-4 {
+  width: 400px;
+  height: 70vh;
+  background: linear-gradient(to bottom,
+      rgba(253, 44, 12, 0.769),
+      rgba(253, 44, 12, 0.102));
+}
+
+.ray-5 {
+  width: 200px;
+  height: 80vh;
+  background: linear-gradient(to bottom,
+      rgba(255, 98, 0, 0.837),
+      rgba(255, 149, 0, 0.205));
+}
+
+.ray-6 {
+  width: 100px;
+  height: 90vh;
+  background: linear-gradient(to bottom,
+      rgba(255, 98, 0, 0.837),
+      rgba(255, 149, 0, 0.205));
+}
+
+.ray-7 {
+  width: 50px;
+  height: 100vh;
+  background: linear-gradient(to bottom,
+      rgba(255, 98, 0, 0.978),
+      rgba(255, 149, 0, 0.196));
+}
+
+
 .hero {
   text-align: center;
   position: relative;
-  /* width: 100dvw; */
   height: 100dvh;
   display: flex;
   align-items: center;
@@ -69,7 +140,7 @@ header {
   text-align: center;
   color: white;
 
-  background: url('/assets/banner.webp') no-repeat center center/cover;
+  /* background: url('/assets/banner.webp') no-repeat center center/cover; */
 }
 
 /* Optional overlay for readability */
@@ -166,13 +237,15 @@ section:not(.hero) {
 .service-card h3 {
   font-size: 1.4rem;
   margin-bottom: 0.8rem;
-  color: #111; /* Heading color */
+  color: #111;
+  /* Heading color */
 }
 
 .service-card p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #555; /* Slightly lighter paragraph text */
+  color: #555;
+  /* Slightly lighter paragraph text */
   margin-bottom: 1rem;
 }
 
@@ -203,7 +276,7 @@ section:not(.hero) {
 .footer {
   text-align: center;
   padding: 2rem;
-  background: #111;
+  background: transparent;
   color: #fff;
   margin-top: 2rem;
   font-size: 0.9rem;
@@ -216,10 +289,6 @@ section:not(.hero) {
     background-color: #242424;
   }
 
-  header {
-    background: #1a1a1a;
-  }
-
   .nav-links a {
     color: #f5f5f5;
   }
@@ -228,23 +297,22 @@ section:not(.hero) {
     background: #2a2a2a;
     border-color: #444;
   }
-
-  .footer {
-    background: #000;
-  }
 }
 
 /* Mobile screens */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2rem; /* smaller font on tablets/mobile */
+    font-size: 2rem;
+    /* smaller font on tablets/mobile */
   }
 
   .hero p {
-    font-size: 1rem; /* also shrink paragraph text */
+    font-size: 1rem;
+    /* also shrink paragraph text */
   }
 
   .cta-button {
-    padding: 0.6rem 1.2rem; /* slightly smaller button */
+    padding: 0.6rem 1.2rem;
+    /* slightly smaller button */
   }
 }
