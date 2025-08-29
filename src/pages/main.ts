@@ -5,15 +5,18 @@ import { About } from '../components/about';
 import { Services } from '../components/services';
 import { Contact } from '../components/contact';
 import { Footer } from '../components/footer';
+import { LightRays } from '../components/light-rays';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   ${Header()}
+  ${LightRays()}
   ${Hero()}
   ${About()}
   ${Services()}
   ${Contact()}
   ${Footer()}
 `;
+
 
 // Smooth scrolling for nav links
 const links = document.querySelectorAll('.nav-links a');
