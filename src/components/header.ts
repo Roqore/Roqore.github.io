@@ -5,10 +5,10 @@ export function Header() {
   // Decide links based on page
   const isHome = path === '/' || path.endsWith('index.html');
 
-  const aboutHref = isHome ? '#about' : '/about';
-  const servicesHref = isHome ? '#services' : '/services';
-  const portfolioHref = isHome ? '#portfolio' : '/portfolio';
-  const contactHref = isHome ? '#contact' : '/#contact';
+  const aboutHref = isHome ? '#about' : '/about/';
+  const servicesHref = isHome ? '#services' : '/services/';
+  const portfolioHref = isHome ? '#portfolio' : '/#portfolio';
+  const contactHref = isHome ? '#contact' : '#contact';
 
   return `
     <header>
