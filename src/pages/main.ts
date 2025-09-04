@@ -6,6 +6,7 @@ import { Services } from '../components/services';
 import { Contact } from '../components/contact';
 import { Footer } from '../components/footer';
 import { LightRays } from '../components/light-rays';
+import { initHeaderScroll } from "../scripts/header";
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   ${Header()}
@@ -29,3 +30,6 @@ links.forEach(link => {
     section?.scrollIntoView({ behavior: 'smooth' });
   });
 });
+
+
+initHeaderScroll();

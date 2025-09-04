@@ -31,18 +31,32 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: background 0.5s ease; 
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+header.scrolled::before {
+  opacity: 1;
 }
 
 .navbar {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-}
-
-.logo {
-  height: 50px;
-  transform: translateY(7%);
+  justify-content: center;
+  /* center logo horizontally */
+  gap: 2rem;
+  position: relative;
 }
 
 .nav-links {
@@ -51,6 +65,28 @@ header {
   gap: 1.5rem;
   margin: 0;
   padding: 0;
+}
+
+/* Separate left and right nav containers */
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1;
+  /* take equal space on each side */
+  justify-content: flex-end;
+  /* left nav aligns right */
+}
+
+.nav-right {
+  justify-content: flex-start;
+  /* right nav aligns left */
+}
+
+.logo {
+  height: 50px;
+  z-index: 1;
+  transform: translateY(7%);
 }
 
 .nav-links a {
@@ -428,6 +464,10 @@ section:not(.hero) {
   .hero p {
     font-size: 1rem;
     /* also shrink paragraph text */
+  }
+
+  .nav-links {
+    font-size: small;
   }
 
   .cta-button {

@@ -13,12 +13,14 @@ export function Header() {
   return `
     <header>
       <nav class="navbar">
-        <ul class="nav-links">
+        <ul class="nav-links nav-left">
           <li><a href="${aboutHref}">About Us</a></li>
           <li><a href="${servicesHref}">Services</a></li>
         </ul>
+
         <a href="/"><img src="/assets/logo white.svg" alt="Roqore Logo" class="logo" /></a>
-        <ul class="nav-links">
+
+        <ul class="nav-links nav-right">
           <li><a href="${portfolioHref}">Portfolio</a></li>
           <li><a href="${contactHref}">Contact</a></li>
         </ul>
