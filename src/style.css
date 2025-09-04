@@ -76,10 +76,31 @@ header {
   top: 0;
   left: 50%;
   transform: translateX(-50%) translateY(-30%) rotate(0deg);
-  filter: blur(40px);
-  /* softness */
   opacity: 0.8;
   pointer-events: none;
+
+  /* initial blur */
+  filter: blur(40px);
+
+  /* animate blur */
+  animation: pulseBlur 4s ease-in-out infinite;
+}
+
+@keyframes pulseBlur {
+  0% {
+    filter: blur(20px);
+    opacity: 0.7;
+  }
+
+  50% {
+    filter: blur(40px);
+    opacity: 0.9;
+  }
+
+  100% {
+    filter: blur(20px);
+    opacity: 0.7;
+  }
 }
 
 .ray {
@@ -142,6 +163,28 @@ header {
       rgba(255, 149, 0, 0.196));
 }
 
+/* vertical float wave animation, reusable */
+/* @keyframes floatWave {
+  0% {
+    transform: translateX(-50%) translateY(-120%) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-30%) rotate(0deg);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-120%) rotate(0deg);
+  }
+}
+
+.ray-1, .ray-2, .ray-3, .ray-4, .ray-5, .ray-6, .ray-7 {
+  animation-name: floatWave;
+  animation-duration: 6s, 6s;
+  animation-timing-function: ease-in-out, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-delay: 0s, 0s;
+} */
 
 .hero {
   text-align: center;
@@ -237,7 +280,7 @@ section:not(.hero) {
 
 .service-card {
   position: relative;
-  border-radius: 12px;
+  border-radius: 6px;
   background: rgba(255, 255, 255, 0.1);
   color: white;
   text-align: center;
@@ -261,7 +304,7 @@ section:not(.hero) {
   height: 200%;
   background: linear-gradient(270deg, #1a1a23, #242431, #1a1a23);
   background-size: 600% 600%;
-  border-radius: 12px;
+  border-radius: 6px;
   z-index: -1;
   animation: moveBorder 8s linear infinite;
 }
@@ -286,9 +329,11 @@ section:not(.hero) {
 }
 
 .service-content {
-  padding: 1rem; /* padding only for content */
+  padding: 1rem;
+  /* padding only for content */
   padding-top: 0;
-  flex: 1; /* push read-more to bottom */
+  flex: 1;
+  /* push read-more to bottom */
   display: flex;
   flex-direction: column;
 }
@@ -296,7 +341,7 @@ section:not(.hero) {
 .service-card h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.2rem;
   color: white;
   /* Heading color */
 }
@@ -325,11 +370,15 @@ section:not(.hero) {
 
 .service-card img {
   width: 100%;
-  height: 180px; /* consistent height across cards */
-  object-fit: cover; /* crop to fit without stretching */
-  border-radius: 2px; /* matches card rounding */
+  height: 180px;
+  /* consistent height across cards */
+  object-fit: cover;
+  /* crop to fit without stretching */
+  border-radius: 2px;
+  /* matches card rounding */
   display: block;
-  background: rgba(255, 255, 255, 0.05); /* subtle fallback background */
+  background: rgba(255, 255, 255, 0.05);
+  /* subtle fallback background */
 }
 
 .contact p {
