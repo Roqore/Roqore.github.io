@@ -237,7 +237,6 @@ section:not(.hero) {
 
 .service-card {
   position: relative;
-  padding: 1.5rem;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.1);
   color: white;
@@ -247,16 +246,10 @@ section:not(.hero) {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   overflow: hidden;
-  /* needed for pseudo-element border */
-
-  /* border animation setup */
   border: 1px solid transparent;
   background-clip: padding-box;
-
   display: flex;
-  /* make it a flex container */
   flex-direction: column;
-  /* stack content vertically */
 }
 
 .service-card::before {
@@ -292,8 +285,16 @@ section:not(.hero) {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
+.service-content {
+  padding: 1rem; /* padding only for content */
+  padding-top: 0;
+  flex: 1; /* push read-more to bottom */
+  display: flex;
+  flex-direction: column;
+}
+
 .service-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.8rem;
   color: white;
@@ -320,6 +321,15 @@ section:not(.hero) {
 
 .service-card .read-more:hover {
   color: #ff5722;
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px; /* consistent height across cards */
+  object-fit: cover; /* crop to fit without stretching */
+  border-radius: 2px; /* matches card rounding */
+  display: block;
+  background: rgba(255, 255, 255, 0.05); /* subtle fallback background */
 }
 
 .contact p {
