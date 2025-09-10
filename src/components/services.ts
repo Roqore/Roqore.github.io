@@ -3,7 +3,7 @@ export function Services() {
   const defaultImage = "/assets/roqore-default-service.webp";
 
   return `
-    <section id="services" class="services">
+    <section id="services" class="page-block services">
       <h2>Our Expertise</h2>
       <div class="grid">
 
