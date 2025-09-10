@@ -17,6 +17,15 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     'Turning complexity into clarity — solving technology challenges at the <strong>raw core</strong>'
   )}
 
+  <section id="our-story" class="page-block our-story">
+    <h2>Our Story</h2>
+    <p>
+      Roqore was founded with a simple belief: <em>technology should solve problems, not create them</em>. 
+      Too many businesses get stuck with outdated systems, data silos, or slow digital adoption. 
+      We started Roqore to change that — helping companies of all sizes embrace technology that is simple, scalable, and built for real-world impact.
+    </p>
+  </section>
+
   <section id="our-values" class="page-block our-values">
     <h2>Our Values</h2>
     <div class="grid">
@@ -55,6 +64,32 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     </div>
   </section>
+
+  <section id="choose-us" class="page-block choose-us">
+    <h2>Why Businesses Choose Roqore</h2>
+    <p>
+      Companies partner with Roqore because we combine technical expertise with a hands-on approach. 
+      We don't just advise — we build, test, and implement solutions that deliver measurable impact. 
+      By aligning every project with your business goals, we help you stay competitive and future-ready in a rapidly changing digital world.
+    </p>
+  </section>
+
+  <section id="our-mission" class="page-block our-mission">
+    <h2>Our Mission</h2>
+    <p>
+      To empower businesses with technology that is <em>simple, powerful, and transformative</em>. 
+      At Roqore, we solve challenges at the raw core so that companies can focus on what they do best: growing and innovating.
+    </p>
+  </section>
+
+  <section id="trusted-by" class="page-block trusted-by">
+    <h2>Trusted By</h2>
+    <p>
+      From startups to established enterprises, Roqore has worked with organizations across diverse industries. 
+      Our track record speaks through long-term partnerships, successful digital transformations, and measurable business outcomes.
+    </p>
+  </section>
+
 
   ${Contact()}
   ${Footer()}
