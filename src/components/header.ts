@@ -14,7 +14,7 @@ export function Header() {
     <header>
       <nav class="navbar">
         <ul class="nav-links nav-left">
-          <li><a href="${aboutHref}">About Us</a></li>
+          <li><a href="${aboutHref}">About</a></li>
           <li><a href="${servicesHref}">Services</a></li>
         </ul>
 
