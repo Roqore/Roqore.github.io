@@ -7,6 +7,7 @@ import { Contact } from '../components/contact';
 import { Footer } from '../components/footer';
 import { LightRays } from '../components/light-rays';
 import { initHeaderScroll } from "../scripts/header";
+import { initSmoothScroll } from '../scripts/smooth-scroll';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   ${Header()}
@@ -18,18 +19,5 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   ${Footer()}
 `;
 
-
-// Smooth scrolling for nav links
-const links = document.querySelectorAll('.nav-links a');
-links.forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const href = link.getAttribute('href');
-    if (!href) return;
-    const section = document.querySelector(href);
-    section?.scrollIntoView({ behavior: 'smooth' });
-  });
-});
-
-
 initHeaderScroll();
+initSmoothScroll();

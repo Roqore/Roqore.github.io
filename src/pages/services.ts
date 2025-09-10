@@ -3,6 +3,8 @@ import '../style.css';
 import { Header } from '../components/header';
 import { Footer } from '../components/footer';
 import { Contact } from '../components/contact';
+import { initHeaderScroll } from '../scripts/header';
+import { initSmoothScroll } from '../scripts/smooth-scroll';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   ${Header()}
@@ -62,3 +64,6 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   ${Contact()}
   ${Footer()}
 `;
+
+initHeaderScroll();
+initSmoothScroll();
