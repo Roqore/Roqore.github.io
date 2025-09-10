@@ -8,7 +8,7 @@ export function Card(title: string, description?: string | null, src?: string, a
         width="400"
         height="300"
         loading="lazy"
-        onerror="this.onerror=null; this.src='/assets/roqore-default-service.webp';"
+        onerror="this.onerror=null; this.src='/assets/roqore-default-image.webp';"
         />
         <div class="content">
             <h3>${title}</h3>
@@ -28,7 +28,7 @@ export function CardLink(title: string, description?: string | null, href?: stri
         width="400"
         height="300"
         loading="lazy"
-        onerror="this.onerror=null; this.src='/assets/roqore-default-service.webp';"
+        onerror="this.onerror=null; this.src='/assets/roqore-default-image.webp';"
         />
         <div class="content">
             <h3>${title}</h3>
