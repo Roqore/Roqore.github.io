@@ -1,7 +1,6 @@
 import '../style.css';
 import { Header } from '../components/header';
 import { Hero } from '../components/hero';
-import { About } from '../components/about';
 import { Contact } from '../components/contact';
 import { Footer } from '../components/footer';
 import { LightRays } from '../components/light-rays';
@@ -13,7 +12,11 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   ${Header()}
   ${LightRays()}
   ${Hero()}
-  ${About()}
+
+  <section id="about" class="page-block about">
+    <h2>About Us</h2>
+    <p>At Roqore, we solve technology problems at their <strong>raw core</strong> — from software to data, AI, and cloud. <br> Our mission is simple: build practical, scalable, and future-ready solutions <br>that help businesses move faster and smarter. <a href="/about/">Learn more →</a></p>
+  </section>
 
   <section id="services" class="page-block services">
     <h2>Our Expertise</h2>
