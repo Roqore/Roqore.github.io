@@ -6,6 +6,7 @@ import { Contact } from '@/components/contact';
 import { PageTitle } from '@/components/page-title';
 import { initHeaderScroll } from '@/scripts/header';
 import { initSmoothScroll } from '@/scripts/smooth-scroll';
+import { careersAssessmentFormSubmit } from '@/scripts/careers-assessment-form-submit-message';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   ${Header()}
@@ -109,3 +110,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 initHeaderScroll();
 initSmoothScroll();
+careersAssessmentFormSubmit('submissionForm', 'successMessage', 'https://docs.google.com/forms/d/e/1FAIpQLSc2ogookr1b2TSXH1WpA3Iw35r8Bq_xthSBm6WyZSWsXsK0Zg/formResponse');

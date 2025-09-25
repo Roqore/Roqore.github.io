@@ -1,15 +1,19 @@
-export function initHeaderScroll() {
-    const form = document.getElementById('submissionForm') as HTMLFormElement;
-    const message = document.getElementById('successMessage');
+export function careersAssessmentFormSubmit(
+    formId: string,
+    messageId: string,
+    fetchUrl: string
+) {
+    const form = document.getElementById(formId) as HTMLFormElement;
+    const message = document.getElementById(messageId);
 
-    if (message !== null && form !== null) {
+    if (message !== null && form !== null && fetchUrl) {
         message.style.display = "none"; // hide success message initially
         form.addEventListener('submit', function (e) {
             e.preventDefault(); // stop normal form submit
 
             const formData = new FormData(form);
 
-            fetch("https://docs.google.com/forms/d/e/1FAIpQLSc2ogookr1b2TSXH1WpA3Iw35r8Bq_xthSBm6WyZSWsXsK0Zg/formResponse", {
+            fetch(fetchUrl, {
                 method: "POST",
                 mode: "no-cors",
                 body: formData

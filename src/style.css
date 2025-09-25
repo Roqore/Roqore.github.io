@@ -80,16 +80,17 @@ select {
 }
 
 button {
-  background: #007BFF;
+  background: var(--primary);
   color: white;
+  font-weight: 500;
   padding: 10px 18px;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 button:hover {
-  background: #0056b3;
+  background: var(--primary-hover);
 }
 
 .navbar {
