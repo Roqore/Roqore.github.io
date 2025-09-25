@@ -7,7 +7,7 @@ export function careersAssessmentFormSubmit(
     const message = document.getElementById(messageId);
 
     if (message !== null && form !== null && fetchUrl) {
-        message.style.display = "none"; // hide success message initially
+        // message.style.display = "none"; // hide success message initially
         form.addEventListener('submit', function (e) {
             e.preventDefault(); // stop normal form submit
 
@@ -20,7 +20,8 @@ export function careersAssessmentFormSubmit(
             })
                 .then(() => {
                     form.style.display = "none";     // hide the form
-                    message.style.display = "block"; // show success message
+                    // message.style.display = "block"; // show success message
+                    message?.classList.add('show');  // adds fade-in effect
                 })
                 .catch(() => {
                     alert("Something went wrong. Please try again.");
