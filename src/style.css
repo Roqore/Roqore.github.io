@@ -9,6 +9,7 @@
   --navlink-color: #ffffff;
   --text-color: #d8edf5;
   --title-color: #325665;
+  --border-color: #325665;
   --primary: #ff7f50;
   --primary-hover: #ff5722;
   --footer-text-color: #3b5f6c;
@@ -53,6 +54,42 @@ header::before {
 
 header.scrolled::before {
   opacity: 1;
+}
+
+label {
+  display: block;
+  margin: 12px 0 4px;
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.required::after {
+  content: " *";
+  color: red;
+}
+
+button {
+  background: #007BFF;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
 }
 
 .navbar {

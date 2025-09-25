@@ -6,6 +6,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
     base: '/',
+    resolve: {
+        alias: {
+            '@': resolve(__dirname, 'src'),
+        }
+    },
     build: {
         rollupOptions: {
             input: {
