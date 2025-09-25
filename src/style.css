@@ -641,13 +641,105 @@ section:not(.hero) {
   /* subtle fallback background */
 }
 
+.careers-list {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 2rem;
+}
+
+/* Career Item Card with Animated Background */
+.career-item {
+  position: relative;
+  border-radius: 8px;
+  background: var(--card-background);
+  color: var(--text-color);
+  padding: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+  font-weight: 400;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+}
+
+/* Animated background layer */
+.career-item::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(270deg, #0e0e13, #12161f, #0e0e13);
+  background-size: 600% 600%;
+  border-radius: 16px;
+  z-index: -1;
+  animation: moveCardBg 10s linear infinite;
+}
+
+@keyframes moveCardBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Hover effect */
+.career-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Title */
+.career-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+/* Description */
+.career-item p {
+  font-size: 0.95rem;
+  color: var(--footer-text-color);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.career-item a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ff7f50;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.career-item a:hover {
+  color: #ff5722;
+}
+
 .contact p {
   text-align: center;
   font-size: 1.1rem;
 }
 
 .contact a {
-  color: #ff7f50;
+  color: var(--primary);
   font-weight: 500;
   text-decoration: none;
 }
