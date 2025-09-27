@@ -224,6 +224,7 @@ button:hover {
   width: 100%;
   height: 100%;
   pointer-events: none;
+  overflow: visible;
 }
 
 .light-ray {
@@ -262,61 +263,28 @@ button:hover {
   position: relative;
 }
 
-.ray-1 {
-  width: 900px;
-  height: 20vh;
-  background: linear-gradient(to bottom,
-      rgba(126, 48, 0, 0.893),
-      rgba(255, 149, 0, 0.05));
+/* Widths for proper centering */
+.ray-1 { width: 900px; height: 20vh; }
+.ray-2 { width: 700px; height: 30vh; }
+.ray-3 { width: 600px; height: 50vh; }
+.ray-4 { width: 400px; height: 70vh; }
+.ray-5 { width: 200px; height: 80vh; }
+.ray-6 { width: 70px;  height: 90vh; }
+.ray-7 { width: 50px;  height: 100vh; }
+
+/* Make rays shrink on mobile but keep their original width for centering */
+.ray-1, .ray-2, .ray-3, .ray-4, .ray-5, .ray-6, .ray-7 {
+  max-width: 100vw; /* never exceed viewport width */
 }
 
-.ray-2 {
-  width: 700px;
-  height: 30vh;
-  background: linear-gradient(to bottom,
-      rgba(181, 69, 0, 0.43),
-      rgba(255, 149, 0, 0.05));
-}
-
-.ray-3 {
-  width: 600px;
-  height: 50vh;
-  background: linear-gradient(to bottom,
-      rgba(181, 69, 0, 0.837),
-      rgba(255, 149, 0, 0.05));
-}
-
-.ray-4 {
-  width: 400px;
-  height: 70vh;
-  background: linear-gradient(to bottom,
-      rgba(253, 44, 12, 0.769),
-      rgba(253, 44, 12, 0.102));
-}
-
-.ray-5 {
-  width: 200px;
-  height: 80vh;
-  background: linear-gradient(to bottom,
-      rgba(255, 98, 0, 0.837),
-      rgba(255, 149, 0, 0.205));
-}
-
-.ray-6 {
-  width: 70px;
-  height: 90vh;
-  background: linear-gradient(to bottom,
-      rgba(255, 98, 0, 0.572),
-      rgba(255, 149, 0, 0.205));
-}
-
-.ray-7 {
-  width: 50px;
-  height: 100vh;
-  background: linear-gradient(to bottom,
-      rgba(255, 98, 0, 0.978),
-      rgba(255, 149, 0, 0.196));
-}
+/* Optional: keep the same gradients */
+.ray-1 { background: linear-gradient(to bottom, rgba(126,48,0,0.893), rgba(255,149,0,0.05)); }
+.ray-2 { background: linear-gradient(to bottom, rgba(181,69,0,0.43), rgba(255,149,0,0.05)); }
+.ray-3 { background: linear-gradient(to bottom, rgba(181,69,0,0.837), rgba(255,149,0,0.05)); }
+.ray-4 { background: linear-gradient(to bottom, rgba(253,44,12,0.769), rgba(253,44,12,0.102)); }
+.ray-5 { background: linear-gradient(to bottom, rgba(255,98,0,0.837), rgba(255,149,0,0.205)); }
+.ray-6 { background: linear-gradient(to bottom, rgba(255,98,0,0.572), rgba(255,149,0,0.205)); }
+.ray-7 { background: linear-gradient(to bottom, rgba(255,98,0,0.978), rgba(255,149,0,0.196)); }
 
 /* vertical float wave animation, reusable */
 /* @keyframes floatWave {
@@ -753,7 +721,7 @@ section:not(.hero) {
 }
 
 .contact a {
-  color: var(--primary);
+  color: var(--color-primary);
   font-weight: 500;
   text-decoration: none;
 }
@@ -762,7 +730,7 @@ section:not(.hero) {
   text-align: center;
   padding: 2rem;
   background: transparent;
-  color: var(--footer-text-color);
+  color: var(--color-footer-text);
   margin-top: 2rem;
   font-size: 0.9rem;
 }
