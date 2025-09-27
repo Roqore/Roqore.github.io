@@ -38,6 +38,7 @@ const basePages = {
 };
 
 // Nested pages (e.g., careers/assessments/index.html)
+const nestedVacancies = getHtmlInputs(resolve(__dirname, 'careers/vacancy'));
 const nestedAssessments = getHtmlInputs(resolve(__dirname, 'careers/assessments'));
 
 export default defineConfig({
@@ -51,6 +52,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 ...basePages,
+                ...nestedVacancies,
                 ...nestedAssessments,
             },
         },
