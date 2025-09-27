@@ -1,6 +1,8 @@
+import { IconArrowUpRightFromSquare } from "./icons";
+
 export function Card(title: string, description?: string | null, src?: string, alt?: string | null, imgTitle?: string | null) {
     return `
-    <div class="card">
+    <div class="card card-image">
         <img 
         src=${src || '/assets/roqore-default-image.webp'}
         alt=${alt || 'roqore default image'} 
@@ -20,7 +22,7 @@ export function Card(title: string, description?: string | null, src?: string, a
 
 export function CardLink(title: string, description?: string | null, href?: string | null, actionTitle?: string | null, src?: string, alt?: string | null, imgTitle?: string | null) {
     return `
-    <div class="card">
+    <div class="card card-image">
         <img 
         src=${src || '/assets/roqore-default-image.webp'}
         alt=${alt || 'roqore default image'} 
@@ -35,6 +37,23 @@ export function CardLink(title: string, description?: string | null, href?: stri
             ${description ? `<p>${description}</p>` : ''}
             ${href ? `<a href=${href} class="card-link">${actionTitle}</a>` : ''}
         </div>
+    </div>
+  `;
+}
+
+export function CardCompact(title: string, description?: string | null, href?: string | null, actionTitle?: string | null) {
+    return `
+    <div class="card card-compact">
+        <div class="content">
+            <h3>${title}</h3>
+            <p>${description}</p>
+        </div>
+        <a href="${href}" class="a-button" target="_blank" rel="noopener">
+            <span class="a-button-text">${actionTitle}</span>
+            <span class="a-button-icon-wrapper">
+            ${IconArrowUpRightFromSquare(18, "white")}
+            </span>
+        </a>
     </div>
   `;
 }

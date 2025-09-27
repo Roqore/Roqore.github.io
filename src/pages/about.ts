@@ -1,12 +1,12 @@
-import '../style.css';
+import '@/style.css';
 
-import { Header } from '../components/header';
-import { Footer } from '../components/footer';
-import { Contact } from '../components/contact';
-import { PageTitle } from '../components/page-title';
-import { Card } from '../components/card';
-import { initHeaderScroll } from '../scripts/header';
-import { initSmoothScroll } from '../scripts/smooth-scroll';
+import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
+import { Contact } from '@/components/contact';
+import { PageTitle } from '@/components/page-title';
+import { Card } from '@/components/card';
+import { initHeaderScroll } from '@/scripts/header';
+import { initSmoothScroll } from '@/scripts/smooth-scroll';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   ${Header()}
