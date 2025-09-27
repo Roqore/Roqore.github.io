@@ -14,7 +14,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   ${PageTitle(
   'software-engineer-part-time-assessment-page-title',
   'Sofware Engineer',
-  'To complete the assessment, <a class="a-link href="https://lyrical-bathtub-81b.notion.site/Candidate-Technical-Task-NestJS-Deployment-26a8f9ea718d80598ee3d8a942001722">read the instructions</a> carefully.'
+  'To complete the assessment, <a class="a-link" href="https://lyrical-bathtub-81b.notion.site/Candidate-Technical-Task-NestJS-Deployment-26a8f9ea718d80598ee3d8a942001722">read the instructions</a> carefully.'
 )}
 
 <section id="assessmentForm" class="page-block form-container">
