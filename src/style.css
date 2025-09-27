@@ -134,10 +134,38 @@ button:hover {
   background: var(--color-primary-hover);
 }
 
+a {
+  color: var(--color-navlink);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-navlink);
+}
+
+a:visited {
+  color: var(--color-navlink);
+}
+
+.a-link {
+  color: var(--color-primary);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.a-link:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
 .a-button {
-  display: inline-flex;         /* put text + icon side by side */
-  align-items: center;          /* vertical centering */
-  gap: 0.5rem;                  /* space between text and icon */
+  display: inline-flex;
+  /* put text + icon side by side */
+  align-items: center;
+  /* vertical centering */
+  gap: 0.5rem;
+  /* space between text and icon */
   padding: 0.5rem 1.25rem;
   background: var(--button-primary);
   color: var(--color-card-heading);
@@ -159,10 +187,12 @@ button:hover {
 }
 
 .a-button-icon {
-  width: 1em;          /* matches text size */
+  width: 1em;
+  /* matches text size */
   height: 1em;
   flex-shrink: 0;
-  display: block;      /* avoid baseline issues */
+  display: block;
+  /* avoid baseline issues */
 }
 
 .a-button-text {
@@ -219,6 +249,35 @@ button:hover {
   color: #ff7f50;
 }
 
+
+.breadcrumb {
+  font-size: 0.8rem;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.breadcrumb-link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  margin: 0 0.5rem;
+  color: var(--color-text);
+}
+
+.breadcrumb-current {
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+
+
 .light-rays {
   position: relative;
   width: 100%;
@@ -264,27 +323,81 @@ button:hover {
 }
 
 /* Widths for proper centering */
-.ray-1 { width: 900px; height: 20vh; }
-.ray-2 { width: 700px; height: 30vh; }
-.ray-3 { width: 600px; height: 50vh; }
-.ray-4 { width: 400px; height: 70vh; }
-.ray-5 { width: 200px; height: 80vh; }
-.ray-6 { width: 70px;  height: 90vh; }
-.ray-7 { width: 50px;  height: 100vh; }
+.ray-1 {
+  width: 900px;
+  height: 20vh;
+}
+
+.ray-2 {
+  width: 700px;
+  height: 30vh;
+}
+
+.ray-3 {
+  width: 600px;
+  height: 50vh;
+}
+
+.ray-4 {
+  width: 400px;
+  height: 70vh;
+}
+
+.ray-5 {
+  width: 200px;
+  height: 80vh;
+}
+
+.ray-6 {
+  width: 70px;
+  height: 90vh;
+}
+
+.ray-7 {
+  width: 50px;
+  height: 100vh;
+}
 
 /* Make rays shrink on mobile but keep their original width for centering */
-.ray-1, .ray-2, .ray-3, .ray-4, .ray-5, .ray-6, .ray-7 {
-  max-width: 100vw; /* never exceed viewport width */
+.ray-1,
+.ray-2,
+.ray-3,
+.ray-4,
+.ray-5,
+.ray-6,
+.ray-7 {
+  max-width: 100vw;
+  /* never exceed viewport width */
 }
 
 /* Optional: keep the same gradients */
-.ray-1 { background: linear-gradient(to bottom, rgba(126,48,0,0.893), rgba(255,149,0,0.05)); }
-.ray-2 { background: linear-gradient(to bottom, rgba(181,69,0,0.43), rgba(255,149,0,0.05)); }
-.ray-3 { background: linear-gradient(to bottom, rgba(181,69,0,0.837), rgba(255,149,0,0.05)); }
-.ray-4 { background: linear-gradient(to bottom, rgba(253,44,12,0.769), rgba(253,44,12,0.102)); }
-.ray-5 { background: linear-gradient(to bottom, rgba(255,98,0,0.837), rgba(255,149,0,0.205)); }
-.ray-6 { background: linear-gradient(to bottom, rgba(255,98,0,0.572), rgba(255,149,0,0.205)); }
-.ray-7 { background: linear-gradient(to bottom, rgba(255,98,0,0.978), rgba(255,149,0,0.196)); }
+.ray-1 {
+  background: linear-gradient(to bottom, rgba(126, 48, 0, 0.893), rgba(255, 149, 0, 0.05));
+}
+
+.ray-2 {
+  background: linear-gradient(to bottom, rgba(181, 69, 0, 0.43), rgba(255, 149, 0, 0.05));
+}
+
+.ray-3 {
+  background: linear-gradient(to bottom, rgba(181, 69, 0, 0.837), rgba(255, 149, 0, 0.05));
+}
+
+.ray-4 {
+  background: linear-gradient(to bottom, rgba(253, 44, 12, 0.769), rgba(253, 44, 12, 0.102));
+}
+
+.ray-5 {
+  background: linear-gradient(to bottom, rgba(255, 98, 0, 0.837), rgba(255, 149, 0, 0.205));
+}
+
+.ray-6 {
+  background: linear-gradient(to bottom, rgba(255, 98, 0, 0.572), rgba(255, 149, 0, 0.205));
+}
+
+.ray-7 {
+  background: linear-gradient(to bottom, rgba(255, 98, 0, 0.978), rgba(255, 149, 0, 0.196));
+}
 
 /* vertical float wave animation, reusable */
 /* @keyframes floatWave {
@@ -364,9 +477,21 @@ button:hover {
   background: #333;
 } */
 
-section:not(.hero) {
+/* section:not(.hero) {
   padding: 4rem 2rem;
   max-width: 1000px;
+  margin: auto;
+} */
+
+.landing-page-block {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.page-block {
+  padding: 2rem 2rem;
+  max-width: 800px;
   margin: auto;
 }
 
@@ -378,11 +503,14 @@ section:not(.hero) {
 
 .page-block h1 {
   text-align: center;
-  /* margin-bottom: 1.5rem; */
 }
 
 .page-block p {
   text-align: center;
+}
+
+.content-block {
+  padding: 0;
 }
 
 /* Limit the form width */
@@ -713,6 +841,27 @@ section:not(.hero) {
 
 /***************/
 
+
+.poster {
+  display: flex;
+  justify-content: center;
+  /* center horizontally */
+  align-items: center;
+  /* optional: center vertically if needed */
+  margin: 2rem 0;
+  /* spacing above and below */
+}
+
+.poster img {
+  max-width: 100%;
+  /* responsive width */
+  height: auto;
+  /* maintain aspect ratio */
+  display: block;
+  /* remove inline spacing */
+  border-radius: 4px;
+  /* optional: rounded corners */
+}
 
 
 .contact p {
