@@ -538,6 +538,18 @@ section:not(.hero) {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+@keyframes moveCardBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .card {
   position: relative;
   border-radius: 6px;
@@ -566,36 +578,12 @@ section:not(.hero) {
   background-size: 600% 600%;
   border-radius: 6px;
   z-index: -1;
-  animation: moveBorder 8s linear infinite;
-}
-
-@keyframes moveBorder {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+  animation: moveCardBg 8s linear infinite;
 }
 
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
-
-.content {
-  padding: 1rem;
-  /* padding only for content */
-  padding-top: 0;
-  flex: 1;
-  /* push card-link to bottom */
-  display: flex;
-  flex-direction: column;
 }
 
 .card h3 {
@@ -639,6 +627,16 @@ section:not(.hero) {
   display: block;
   background: var(--card-background);
   /* subtle fallback background */
+}
+
+.content {
+  padding: 1rem;
+  /* padding only for content */
+  padding-top: 0;
+  flex: 1;
+  /* push card-link to bottom */
+  display: flex;
+  flex-direction: column;
 }
 
 .careers-list {

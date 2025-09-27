@@ -39,12 +39,28 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <h2 class="section-heading">Skill Assessments</h2>
     <p class="section-description">Showcase your skills by completing one of our assessments.</p>
     <div class="assessments-list">
-      <a href="/careers/assessments/nestjs" target="_blank" rel="noopener" class="careers-cta-button">NestJS Assessment</a>
-      <a href="/careers/assessments/python" target="_blank" rel="noopener" class="careers-cta-button">Python Assessment</a>
-      <a href="/careers/assessments/github-actions" target="_blank" rel="noopener" class="careers-cta-button">GitHub Actions Assessment</a>
-      <a href="/careers/assessments/sql" target="_blank" rel="noopener" class="careers-cta-button">SQL Assessment</a>
+      <div class="assessment-card">
+        <h3>NestJS Assessment</h3>
+        <a href="/careers/assessments/nestjs" target="_blank" rel="noopener">Start Test →</a>
+      </div>
+
+      <div class="assessment-card">
+        <h3>Python Assessment</h3>
+        <a href="/careers/assessments/python" target="_blank" rel="noopener">Start Test →</a>
+      </div>
+
+      <div class="assessment-card">
+        <h3>GitHub Actions Assessment</h3>
+        <a href="/careers/assessments/github-actions" target="_blank" rel="noopener">Start Test →</a>
+      </div>
+
+      <div class="assessment-card">
+        <h3>SQL Assessment</h3>
+        <a href="/careers/assessments/sql" target="_blank" rel="noopener">Start Test →</a>
+      </div>
     </div>
   </section>
+
 
   ${Contact()}
   ${Footer()}
